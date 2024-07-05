@@ -1,0 +1,16 @@
+<!--Se agrego un menu donde se vera una bienvenida y dos botones-->
+<!-- El primero agrega un nuevo libro y el segundo muestra los libros disponibles -->
+{% extends 'layout.html' %}
+{% block content %}
+<div class="mt-4">
+    <div class="jumbotron">
+        <h1 class="display-4">Bienvenido a la Biblioteca Virtual</h1>
+        <h3 class="display-6">Explora y Gestiona Nuestra Biblioteca Virtual</h3>
+        <p class="lead">"Un libro abierto es un cerebro que habla; cerrado, un amigo que espera; olvidado, un alma que perdona; destruido, un corazón que llora."</p>
+        <hr class="my-4">
+        <p>¡Bienvenido! Aquí puedes administrar los libros de nuestra biblioteca virtual de manera eficiente y profesional.</p>
+        <a class="btn btn-primary btn-lg" href="{{ url_for('add_book') }}" role="button">Agregar Nuevo Libro</a>
+        <a class="btn btn-info btn-lg ml-2" href="{{ url_for('libros_dispo') }}" role="button">Ver Libros Disponibles</a>
+    </div>
+</div>
+{% endblock %}
